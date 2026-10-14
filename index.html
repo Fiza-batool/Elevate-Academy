@@ -1,0 +1,1033 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elevate Test Prep Academy — Your Path to Top Scores</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #f6f7fb;
+        --card: #ffffff;
+        --navy: #1b2a4a;
+        --navy-soft: #4a5578;
+        --indigo: #3e4c8a;
+        --gold: #c99a3e;
+        --line: #e4e7f0;
+        --success: #2fa76b;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background: var(--bg);
+        color: var(--navy);
+        font-family: "Inter", sans-serif;
+        line-height: 1.6;
+      }
+
+      h1,
+      h2,
+      h3 {
+        font-family: "Sora", sans-serif;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      /* ---------- Nav ---------- */
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 22px 8%;
+        background: var(--card);
+        border-bottom: 1px solid var(--line);
+        position: sticky;
+        top: 0;
+        z-index: 30;
+      }
+      .logo {
+        font-family: "Sora", sans-serif;
+        font-weight: 700;
+        font-size: 1.3rem;
+      }
+      .logo span {
+        color: var(--gold);
+      }
+      nav .links a {
+        color: var(--navy-soft);
+        margin-left: 28px;
+        font-size: 0.92rem;
+        font-weight: 500;
+      }
+      nav .links a:hover {
+        color: var(--indigo);
+      }
+
+      /* ---------- Hero ---------- */
+      .hero {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 50px;
+        padding: 7% 8%;
+        max-width: 1300px;
+        margin: 0 auto;
+      }
+      .hero-text {
+        flex: 1 1 460px;
+      }
+      .tag {
+        display: inline-block;
+        background: rgba(201, 154, 62, 0.12);
+        color: var(--gold);
+        padding: 7px 16px;
+        border-radius: 100px;
+        font-size: 0.78rem;
+        font-weight: 600;
+        margin-bottom: 20px;
+      }
+      .hero h1 {
+        font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+        line-height: 1.15;
+        margin-bottom: 18px;
+      }
+      .hero h1 .accent {
+        color: var(--indigo);
+      }
+      .hero p {
+        color: var(--navy-soft);
+        font-size: 1.02rem;
+        max-width: 480px;
+        margin-bottom: 30px;
+      }
+
+      .btn-primary {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: var(--indigo);
+        color: #fff;
+        padding: 15px 30px;
+        border-radius: 10px;
+        font-weight: 600;
+        font-size: 0.95rem;
+        transition:
+          background 0.2s ease,
+          transform 0.2s ease;
+      }
+      .btn-primary:hover {
+        background: var(--navy);
+        transform: translateY(-2px);
+      }
+
+      .hero-stats {
+        display: flex;
+        gap: 34px;
+        margin-top: 40px;
+      }
+      .hero-stats div h3 {
+        color: var(--indigo);
+        font-size: 1.6rem;
+      }
+      .hero-stats div p {
+        color: var(--navy-soft);
+        font-size: 0.8rem;
+      }
+
+      .hero-image {
+        flex: 1 1 380px;
+        aspect-ratio: 4/3.2;
+        border-radius: 20px;
+        background: url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1000&auto=format&fit=crop")
+          center/cover;
+        box-shadow: 0 30px 60px -25px rgba(27, 42, 74, 0.35);
+      }
+
+      /* ---------- Programs ---------- */
+      .section {
+        padding: 80px 8%;
+        max-width: 1300px;
+        margin: 0 auto;
+      }
+      .section-tag {
+        color: var(--gold);
+        font-size: 0.8rem;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+      }
+      .section-title {
+        font-size: 2.2rem;
+        margin: 8px 0 44px;
+      }
+
+      .programs-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 22px;
+      }
+      .program-card {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        padding: 30px 26px;
+        transition:
+          box-shadow 0.25s ease,
+          transform 0.25s ease;
+      }
+      .program-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 20px 40px -22px rgba(27, 42, 74, 0.25);
+      }
+      .program-card h3 {
+        font-size: 1.1rem;
+        margin-bottom: 8px;
+      }
+      .program-card p {
+        color: var(--navy-soft);
+        font-size: 0.9rem;
+      }
+      .program-card .price {
+        color: var(--indigo);
+        font-weight: 700;
+        margin-top: 14px;
+        font-size: 1rem;
+      }
+
+      /* ---------- Lead Form Section ---------- */
+      .form-section {
+        background: var(--navy);
+        color: #fff;
+        border-radius: 24px;
+        margin: 20px 8% 0;
+        padding: 60px 6%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 50px;
+      }
+      .form-info {
+        flex: 1 1 340px;
+      }
+      .form-info h2 {
+        font-size: 2rem;
+        margin-bottom: 16px;
+      }
+      .form-info p {
+        color: #c7ccdd;
+        margin-bottom: 24px;
+      }
+      .form-info ul {
+        list-style: none;
+      }
+      .form-info li {
+        padding: 8px 0;
+        color: #dde1ee;
+        font-size: 0.92rem;
+      }
+      .form-info li::before {
+        content: "✓ ";
+        color: var(--gold);
+        font-weight: 700;
+      }
+
+      .lead-form {
+        flex: 1 1 360px;
+        background: #fff;
+        border-radius: 16px;
+        padding: 34px 30px;
+        color: var(--navy);
+      }
+      .lead-form h3 {
+        margin-bottom: 4px;
+      }
+      .lead-form .sub {
+        color: var(--navy-soft);
+        font-size: 0.85rem;
+        margin-bottom: 22px;
+      }
+      .form-group {
+        margin-bottom: 16px;
+      }
+      .form-group label {
+        display: block;
+        font-size: 0.85rem;
+        font-weight: 600;
+        margin-bottom: 6px;
+      }
+      .form-group input,
+      .form-group select {
+        width: 100%;
+        padding: 12px 14px;
+        border: 1.5px solid var(--line);
+        border-radius: 9px;
+        font-family: "Inter", sans-serif;
+        font-size: 0.92rem;
+        transition: border-color 0.2s ease;
+      }
+      .form-group input:focus,
+      .form-group select:focus {
+        outline: none;
+        border-color: var(--indigo);
+      }
+
+      .btn-submit {
+        width: 100%;
+        background: var(--gold);
+        color: var(--navy);
+        border: none;
+        padding: 14px;
+        border-radius: 9px;
+        font-weight: 700;
+        font-size: 0.95rem;
+        cursor: pointer;
+        transition: opacity 0.2s ease;
+        font-family: "Inter", sans-serif;
+      }
+      .btn-submit:hover {
+        opacity: 0.9;
+      }
+
+      .form-success {
+        display: none;
+        background: rgba(47, 167, 107, 0.1);
+        color: var(--success);
+        padding: 14px;
+        border-radius: 9px;
+        font-size: 0.88rem;
+        margin-top: 14px;
+        text-align: center;
+        font-weight: 600;
+      }
+
+      footer {
+        text-align: center;
+        padding: 40px 8% 30px;
+        color: var(--navy-soft);
+        font-size: 0.8rem;
+        margin-top: 40px;
+      }
+
+      /* ---------- Chat Widget ---------- */
+      #chat-toggle {
+        position: fixed;
+        bottom: 26px;
+        right: 26px;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: var(--indigo);
+        color: #fff;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        box-shadow: 0 10px 30px -8px rgba(62, 76, 138, 0.6);
+        z-index: 50;
+        transition: transform 0.2s ease;
+      }
+      #chat-toggle:hover {
+        transform: scale(1.08);
+      }
+
+      #chat-window {
+        position: fixed;
+        bottom: 100px;
+        right: 26px;
+        width: 320px;
+        max-height: 420px;
+        background: #fff;
+        border-radius: 16px;
+        box-shadow: 0 25px 60px -20px rgba(0, 0, 0, 0.3);
+        display: none;
+        flex-direction: column;
+        overflow: hidden;
+        z-index: 50;
+        border: 1px solid var(--line);
+        transition:
+          width 0.3s ease,
+          height 0.3s ease,
+          max-height 0.3s ease;
+      }
+      #chat-window.open {
+        display: flex;
+      }
+      #chat-window.expanded {
+        width: 460px;
+        max-height: 640px;
+      }
+
+      .chat-header {
+        background: var(--navy);
+        color: #fff;
+        padding: 16px 18px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .chat-header strong {
+        display: block;
+        font-size: 0.95rem;
+      }
+      .chat-header span {
+        font-size: 0.75rem;
+        color: #b7beda;
+      }
+      .chat-header-text {
+        flex: 1;
+      }
+      #chat-resize {
+        background: rgba(255, 255, 255, 0.12);
+        border: none;
+        color: #fff;
+        width: 30px;
+        height: 30px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 0.9rem;
+        flex-shrink: 0;
+      }
+      #chat-resize:hover {
+        background: rgba(255, 255, 255, 0.22);
+      }
+
+      .chat-body {
+        flex: 1;
+        padding: 16px;
+        overflow-y: auto;
+        background: #f6f7fb;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        max-height: 260px;
+        transition: max-height 0.3s ease;
+      }
+      #chat-window.expanded .chat-body {
+        max-height: 460px;
+      }
+
+      .msg {
+        padding: 10px 14px;
+        border-radius: 12px;
+        font-size: 0.85rem;
+        max-width: 85%;
+      }
+      .msg.bot {
+        background: #fff;
+        border: 1px solid var(--line);
+        align-self: flex-start;
+      }
+      .msg.user {
+        background: var(--indigo);
+        color: #fff;
+        align-self: flex-end;
+      }
+
+      .chat-quick {
+        padding: 10px 14px;
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        border-top: 1px solid var(--line);
+      }
+      .chat-quick button {
+        background: #f0f1f8;
+        border: 1px solid var(--line);
+        border-radius: 100px;
+        padding: 7px 12px;
+        font-size: 0.75rem;
+        cursor: pointer;
+        font-family: "Inter", sans-serif;
+      }
+      .chat-quick button:hover {
+        background: var(--indigo);
+        color: #fff;
+      }
+
+      .chat-input-row {
+        display: flex;
+        gap: 8px;
+        padding: 12px 14px;
+        border-top: 1px solid var(--line);
+      }
+      .chat-input-row input {
+        flex: 1;
+        padding: 10px 14px;
+        border: 1.5px solid var(--line);
+        border-radius: 100px;
+        font-family: "Inter", sans-serif;
+        font-size: 0.85rem;
+      }
+      .chat-input-row input:focus {
+        outline: none;
+        border-color: var(--indigo);
+      }
+      .chat-input-row button {
+        background: var(--indigo);
+        color: #fff;
+        border: none;
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        cursor: pointer;
+        font-size: 1rem;
+      }
+
+      /* ---------- Trust strip ---------- */
+      .trust-strip {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        align-items: center;
+        padding: 24px 8%;
+        border-top: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+        color: var(--navy-soft);
+        font-size: 0.8rem;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+      }
+      .trust-strip span {
+        opacity: 0.7;
+      }
+
+      /* ---------- Testimonials ---------- */
+      .testi-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 22px;
+      }
+      .testi-card {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        padding: 28px 26px;
+      }
+      .testi-stars {
+        color: var(--gold);
+        font-size: 0.9rem;
+        margin-bottom: 12px;
+      }
+      .testi-card p {
+        color: var(--navy-soft);
+        font-size: 0.92rem;
+        margin-bottom: 18px;
+        font-style: italic;
+      }
+      .testi-author {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .testi-avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: var(--indigo);
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 0.85rem;
+      }
+      .testi-author div strong {
+        display: block;
+        font-size: 0.88rem;
+      }
+      .testi-author div span {
+        font-size: 0.76rem;
+        color: var(--navy-soft);
+      }
+
+      /* ---------- FAQ ---------- */
+      .faq-item {
+        border-bottom: 1px solid var(--line);
+        padding: 20px 4px;
+        cursor: pointer;
+      }
+      .faq-q {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: 600;
+        font-size: 0.98rem;
+      }
+      .faq-q .plus {
+        color: var(--indigo);
+        font-size: 1.2rem;
+        transition: transform 0.25s ease;
+      }
+      .faq-item.open .plus {
+        transform: rotate(45deg);
+      }
+      .faq-a {
+        max-height: 0;
+        overflow: hidden;
+        color: var(--navy-soft);
+        font-size: 0.9rem;
+        transition:
+          max-height 0.3s ease,
+          padding-top 0.3s ease;
+      }
+      .faq-item.open .faq-a {
+        max-height: 200px;
+        padding-top: 12px;
+      }
+
+      /* ---------- Typing indicator ---------- */
+      .typing {
+        display: flex;
+        gap: 4px;
+        padding: 10px 14px;
+      }
+      .typing span {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--navy-soft);
+        animation: typing-bounce 1.2s infinite ease-in-out;
+      }
+      .typing span:nth-child(2) {
+        animation-delay: 0.15s;
+      }
+      .typing span:nth-child(3) {
+        animation-delay: 0.3s;
+      }
+      @keyframes typing-bounce {
+        0%,
+        60%,
+        100% {
+          transform: translateY(0);
+          opacity: 0.4;
+        }
+        30% {
+          transform: translateY(-5px);
+          opacity: 1;
+        }
+      }
+
+      @media (max-width: 640px) {
+        nav .links {
+          display: none;
+        }
+        .form-section {
+          padding: 40px 6%;
+        }
+        #chat-window {
+          width: 88vw;
+          right: 6vw;
+        }
+        #chat-window.expanded {
+          width: 92vw;
+          max-height: 78vh;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">ELEVATE<span> ACADEMY</span></div>
+      <div class="links">
+        <a href="#programs">Programs</a>
+        <a href="#enroll">Enroll</a>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-text">
+        <span class="tag">Admissions Open — 2026 Batch</span>
+        <h1>Your path to <span class="accent">top scores</span> starts here</h1>
+        <p>
+          Elevate Test Prep Academy helps students crack entry tests and board
+          exams with expert faculty, small batches, and a proven study system.
+        </p>
+        <a href="#enroll" class="btn-primary">Book a Free Consultation →</a>
+        <div class="hero-stats">
+          <div>
+            <h3>2,400+</h3>
+            <p>Students Trained</p>
+          </div>
+          <div>
+            <h3>94%</h3>
+            <p>Success Rate</p>
+          </div>
+          <div>
+            <h3>15</h3>
+            <p>Expert Faculty</p>
+          </div>
+        </div>
+      </div>
+      <div class="hero-image"></div>
+    </section>
+
+    <div class="trust-strip">
+      <span>Trusted by students preparing for</span>
+      <strong>MDCAT</strong><span>·</span><strong>ECAT</strong><span>·</span
+      ><strong>Cambridge O/A Levels</strong><span>·</span
+      ><strong>NUST Entry Test</strong>
+    </div>
+
+    <section class="section" id="programs">
+      <span class="section-tag">Our Programs</span>
+      <h2 class="section-title">Choose Your Track</h2>
+      <div class="programs-grid">
+        <div class="program-card">
+          <h3>MDCAT Prep</h3>
+          <p>
+            Complete syllabus coverage with weekly tests and performance
+            tracking.
+          </p>
+          <div class="price">Rs. 25,000 / 3 months</div>
+        </div>
+        <div class="program-card">
+          <h3>ECAT Prep</h3>
+          <p>
+            Focused problem-solving practice with engineering-track specialists.
+          </p>
+          <div class="price">Rs. 22,000 / 3 months</div>
+        </div>
+        <div class="program-card">
+          <h3>O/A Level Tutoring</h3>
+          <p>
+            Subject-wise expert tutoring aligned with Cambridge exam boards.
+          </p>
+          <div class="price">Rs. 15,000 / month</div>
+        </div>
+        <div class="program-card">
+          <h3>1-on-1 Mentoring</h3>
+          <p>Personalised study plans with weekly progress check-ins.</p>
+          <div class="price">Rs. 8,000 / session pack</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <span class="section-tag">Success Stories</span>
+      <h2 class="section-title">What Our Students Say</h2>
+      <div class="testi-grid">
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p>
+            "I went from a 68% practice score to clearing MDCAT in my first
+            attempt. The weekly tests kept me on track."
+          </p>
+          <div class="testi-author">
+            <div class="testi-avatar">AH</div>
+            <div><strong>Ayesha H.</strong><span>MDCAT 2025 Batch</span></div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p>
+            "The 1-on-1 mentoring made all the difference — my mentor actually
+            tracked my weak areas every week."
+          </p>
+          <div class="testi-author">
+            <div class="testi-avatar">BK</div>
+            <div><strong>Bilal K.</strong><span>ECAT 2025 Batch</span></div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p>
+            "Small batch sizes meant I could actually ask questions. Highly
+            recommend for A-Level students."
+          </p>
+          <div class="testi-author">
+            <div class="testi-avatar">ZM</div>
+            <div><strong>Zainab M.</strong><span>A-Level Batch</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top: 0">
+      <span class="section-tag">Questions</span>
+      <h2 class="section-title">Frequently Asked</h2>
+      <div class="faq-item">
+        <div class="faq-q">
+          <span>What is the batch size?</span><span class="plus">+</span>
+        </div>
+        <div class="faq-a">
+          Our batches are capped at 15 students to ensure every student gets
+          individual attention from faculty.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          <span>Do you offer a free trial class?</span
+          ><span class="plus">+</span>
+        </div>
+        <div class="faq-a">
+          Yes — every new student gets one free trial class and a diagnostic
+          test before enrolling.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          <span>Is there an installment plan for fees?</span
+          ><span class="plus">+</span>
+        </div>
+        <div class="faq-a">
+          Yes, fees can be split into monthly installments for our 3-month
+          programs. Ask our team for details.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          <span>Are classes online or in-person?</span
+          ><span class="plus">+</span>
+        </div>
+        <div class="faq-a">
+          Both options are available — choose in-person at our Lahore campus or
+          join live online sessions.
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="enroll" style="padding-top: 0">
+      <div class="form-section">
+        <div class="form-info">
+          <h2>Get a Free Consultation</h2>
+          <p>
+            Fill the form and our admissions team will reach out on WhatsApp
+            within a few hours — no obligation, just guidance.
+          </p>
+          <ul>
+            <li>Personalised program recommendation</li>
+            <li>Free diagnostic test</li>
+            <li>Flexible batch timings</li>
+            <li>Scholarship info for top scorers</li>
+          </ul>
+        </div>
+
+        <form class="lead-form" id="leadForm">
+          <h3>Book Your Free Consultation</h3>
+          <p class="sub">Response within a few hours, guaranteed.</p>
+
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" required placeholder="Your name" />
+          </div>
+          <div class="form-group">
+            <label for="phone">WhatsApp Number</label>
+            <input type="tel" id="phone" required placeholder="03XX-XXXXXXX" />
+          </div>
+          <div class="form-group">
+            <label for="program">Interested Program</label>
+            <select id="program">
+              <option>MDCAT Prep</option>
+              <option>ECAT Prep</option>
+              <option>O/A Level Tutoring</option>
+              <option>1-on-1 Mentoring</option>
+            </select>
+          </div>
+          <button type="submit" class="btn-submit">
+            Request Free Consultation
+          </button>
+          <div class="form-success" id="formSuccess">
+            ✓ Thanks! Our team will WhatsApp you shortly.
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      © 2026 Elevate Test Prep Academy · Lahore, Pakistan ·
+      admissions@elevateacademy.pk
+    </footer>
+
+    <!-- Chat Widget -->
+    <button id="chat-toggle" aria-label="Open chat">💬</button>
+    <div id="chat-window">
+      <div class="chat-header">
+        <div class="chat-header-text">
+          <strong>Elevate Assistant</strong>
+          <span>Usually replies in a few minutes</span>
+        </div>
+        <button id="chat-resize" aria-label="Resize chat" title="Resize chat">
+          ⤢
+        </button>
+      </div>
+      <div class="chat-body" id="chatBody">
+        <div class="msg bot">
+          Hi! 👋 I'm the Elevate Academy assistant. How can I help you today?
+        </div>
+      </div>
+      <div class="chat-quick" id="chatQuick">
+        <button data-q="fees">Program fees</button>
+        <button data-q="timing">Batch timings</button>
+        <button data-q="human">Talk to a person</button>
+      </div>
+      <div class="chat-input-row">
+        <input type="text" id="chatInput" placeholder="Type your question..." />
+        <button id="chatSend" aria-label="Send">➤</button>
+      </div>
+    </div>
+
+    <script>
+      const toggle = document.getElementById("chat-toggle");
+      const win = document.getElementById("chat-window");
+      const resizeBtn = document.getElementById("chat-resize");
+      const body = document.getElementById("chatBody");
+      const quick = document.getElementById("chatQuick");
+      const input = document.getElementById("chatInput");
+      const sendBtn = document.getElementById("chatSend");
+
+      toggle.addEventListener("click", () => win.classList.toggle("open"));
+      resizeBtn.addEventListener("click", () => {
+        win.classList.toggle("expanded");
+        resizeBtn.textContent = win.classList.contains("expanded") ? "⤡" : "⤢";
+      });
+
+      // Your live n8n chatbot webhook
+      const N8N_WEBHOOK_URL =
+        "https://fizabatool021.app.n8n.cloud/webhook/elevate-chatbot";
+
+      // One session ID per visitor so the AI remembers the conversation
+      const sessionId = "session-" + Math.random().toString(36).slice(2, 11);
+
+      function addMessage(text, sender) {
+        const msg = document.createElement("div");
+        msg.className = "msg " + sender;
+        if (sender === "bot") {
+          msg.innerHTML = formatBotText(text);
+        } else {
+          msg.textContent = text;
+        }
+        body.appendChild(msg);
+        body.scrollTop = body.scrollHeight;
+        return msg;
+      }
+
+      // Converts simple markdown from the AI (bold + bullet points) into readable HTML
+      function formatBotText(text) {
+        const escaped = text
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;");
+
+        const lines = escaped.split(/\n+/);
+        let html = "";
+        let inList = false;
+
+        lines.forEach((line) => {
+          const trimmed = line.trim();
+          const isBullet = /^\*\s+/.test(trimmed) || /^-\s+/.test(trimmed);
+          const content = trimmed.replace(/^\*\s+/, "").replace(/^-\s+/, "");
+          const bolded = content.replace(
+            /\*\*(.+?)\*\*/g,
+            "<strong>$1</strong>",
+          );
+
+          if (isBullet) {
+            if (!inList) {
+              html += '<ul style="margin:6px 0 6px 18px; padding:0;">';
+              inList = true;
+            }
+            html += `<li style="margin-bottom:4px;">${bolded}</li>`;
+          } else {
+            if (inList) {
+              html += "</ul>";
+              inList = false;
+            }
+            if (trimmed) html += `<p style="margin:0 0 6px;">${bolded}</p>`;
+          }
+        });
+        if (inList) html += "</ul>";
+        return html;
+      }
+
+      function showTyping() {
+        const typing = document.createElement("div");
+        typing.className = "typing";
+        typing.id = "typingIndicator";
+        typing.innerHTML = "<span></span><span></span><span></span>";
+        body.appendChild(typing);
+        body.scrollTop = body.scrollHeight;
+      }
+
+      function hideTyping() {
+        const typing = document.getElementById("typingIndicator");
+        if (typing) typing.remove();
+      }
+
+      async function sendToAI(message) {
+        addMessage(message, "user");
+        showTyping();
+
+        try {
+          const res = await fetch(N8N_WEBHOOK_URL, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ chatInput: message, sessionId: sessionId }),
+          });
+          const data = await res.json();
+          hideTyping();
+          // n8n chat responses usually come back as { output: "..." }
+          addMessage(
+            data.output ||
+              data.text ||
+              "Sorry, I didn't get that — could you rephrase?",
+            "bot",
+          );
+        } catch (err) {
+          hideTyping();
+          addMessage(
+            "I'm having trouble connecting right now. Please try again in a moment or message us on WhatsApp.",
+            "bot",
+          );
+        }
+      }
+
+      quick.addEventListener("click", (e) => {
+        const btn = e.target.closest("button");
+        if (!btn) return;
+        sendToAI(btn.textContent);
+      });
+
+      sendBtn.addEventListener("click", () => {
+        const value = input.value.trim();
+        if (!value) return;
+        input.value = "";
+        sendToAI(value);
+      });
+
+      input.addEventListener("keydown", (e) => {
+        if (e.key === "Enter") sendBtn.click();
+      });
+
+      // FAQ accordion
+      document.querySelectorAll(".faq-item").forEach((item) => {
+        item.addEventListener("click", () => {
+          const isOpen = item.classList.contains("open");
+          document
+            .querySelectorAll(".faq-item")
+            .forEach((i) => i.classList.remove("open"));
+          if (!isOpen) item.classList.add("open");
+        });
+      });
+
+      document
+        .getElementById("leadForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          document.getElementById("formSuccess").style.display = "block";
+          this.querySelector(".btn-submit").style.display = "none";
+          // NOTE: This is where a real n8n webhook call would go, e.g.:
+          // fetch('YOUR_N8N_WEBHOOK_URL', { method: 'POST', body: JSON.stringify({...}) })
+        });
+    </script>
+  </body>
+</html>
